@@ -4,8 +4,9 @@
     <title> Kukulkan | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="../img/icon.png">
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="icon" type="image/jpg" href="../img/kulkulkan.jpg">
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
 </head>
 
 <body>
@@ -13,11 +14,13 @@
     <!-- le header de la page -->
     <div class="header">
         <div class="topnav">
+            <img src="../img/kulkulkan.jpg" alt="logo" />
             <a href="../index.html">Société Kukulkan</a>
             <a href="./cigarettes.html">Cigarettes</a>
             <a href="./gouts.html">Goûts</a>
             <a href="./accessoires.html">Accessoires</a>
             <a href="./contact.html" class="active">Contact</a>
+            <a href="" style="float:right" class="active">Connexion</a>
         </div>
     </div>
 
@@ -38,13 +41,51 @@
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
-            <h2>Nos accesoires</h2>
+
+            <h2>Contactez nous</h2>
+
+
+            <form action="" class="form" method="post">
+
+                <div class="champForm"><p>Date du contact</p><input type="date" name="dateContact" required /></div>
+                
+                <div class="champForm"><p>Nom</p><input type="text" name="nom" placeholder="Entrez votre nom" required /></div>
+
+                <div class="champForm"><p>Prénom</p><input type="text" name="prenom" placeholder="Entrez votre prénom" required /></div>
+
+                <div class="champForm"><p>Email</p><input type="email" name="email" pattern=".+@globex\.com" size="30" placeholder="Entrez votre adresse mail" required/></div>
+
+                <div class="champForm"><p>Genre</p><input type="radio" name="genre" value="Femme" /> Femme <input type="radio" name="genre" value="Homme" /> Homme</div>
+
+                <div class="champForm"><p>Date de naissance</p><input type="date" name="dateNaissance" required /></div>
+                
+                <div class="champForm">
+                    <p>Fonction</p>
+                    <select size='1' name='fonction'>
+                        <option value="---">---</option>
+                        <option value="enseignant">Enseignant</option>
+                        <option value="ingenieur">Ingénieur</option>
+                        <option value="developpeur">Développeur</option>
+                    </select>
+                </div>
+                
+
+                <div class="champForm"><p>Sujet</p><input type="text" name="sujet" placeholder="Entrez le sujet de votre mail" required /></div>
+
+                <div class="champForm"><p>Contenu</p><input type="textarea" name="contenu" rows="5" cols="33" placeholder="Entrez le contenu de votre mail" required /></div>
+
+                <div class="champForm"><p></p><input type="submit" value="Valider" id="boutonValider" class="btn"/></div>
+
+            </form>
+
         </div>
+
     </div>
 
     <!-- le footer de la page -->
     <div class="footer">
-        Copyright © 2022 Kukulkan
+        <p>Pour nous contacter, veuillez composer le 05.59.01.02.03</p>
+        <p>Copyright © 2022 Kukulkan</p>
     </div>
 
 </body>

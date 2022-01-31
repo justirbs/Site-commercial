@@ -14,6 +14,10 @@ a {
     color: #f2f2f2;
 }
 
+h2 {
+    margin-top: 0px;
+}
+
 
 /*.header{
     text-align: center;
@@ -35,16 +39,16 @@ a {
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
-    width: 25%;
+    width: 11%;
     height: auto;
     object-fit: contain;
 }
 
 .principal {
     background-color: #333;
-    padding: 2%;
+    padding: 0% 2%;
     text-align: center;
-    width: 75%;
+    width: 89%;
     height: auto;
     object-fit: contain;
 }
@@ -65,10 +69,10 @@ table {
 
 .footer {
     background-color: #8d8f7d;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
     width: 100%;
-    height: auto;
+    height: 5%;
     text-align: center;
     align-self: flex-end;
 }
@@ -81,11 +85,11 @@ table {
     overflow: hidden;
 }
 
-.topnav a img {
-    max-width: 10%;
+.topnav img {
+    max-width: 36px;
     height: auto;
     object-fit: contain;
-    padding: 0%;
+    float: left;
 }
 
 

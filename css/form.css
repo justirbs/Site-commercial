@@ -1,0 +1,109 @@
+.form input[type=submit] {
+    width: 10%;
+    background-color: #8d8f7d;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+.form input[type=submit]:hover {
+    background-color: #6b6d5e;
+    cursor: pointer;
+}
+
+.form input[type=text], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #5a5958;
+}
+
+.form input[type=password], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #5a5958;
+  height: 100px;
+}
+
+.form input[type=date]{
+    color: #5a5958;
+    width: 30%;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form input[type=date]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+
+.form input[type=tel], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #5a5958;
+}
+
+.form input[type=email], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #5a5958;
+}
+
+.form input[type=radio]{
+    width: 5%;
+}
+
+.form{
+    margin-top: 5%;
+}
+
+.champForm{
+    display: flex;
+}
+
+.champForm p{
+    text-align: left;
+    padding-left: 10%;
+    width: 15%;
+}
+
+.champForm input{
+    width: auto;
+}
