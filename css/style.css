@@ -1,18 +1,19 @@
-body{
-    margin : 0;
+body {
+    margin: 0;
     color: #f2f2f2;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    align-content: stretch;
     width: 100%;
     height: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: #f2f2f2;
 }
+
 
 /*.header{
     text-align: center;
@@ -20,76 +21,113 @@ a{
     width: 100%;
 }*/
 
-.corps{
+.corps {
     text-align: center;
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 75%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.menu{
+.menu {
     background-color: rgb(71, 71, 71);
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
     width: 25%;
+    height: auto;
+    object-fit: contain;
 }
 
-.principal{
+.principal {
     background-color: #333;
     padding: 2%;
     text-align: center;
-    width: 100%;
+    width: 75%;
+    height: auto;
+    object-fit: contain;
 }
 
-.footer{
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer {
     background-color: #8d8f7d;
     padding-top: 5%;
     padding-bottom: 5%;
     width: 100%;
-    height: 3.25%;
+    height: auto;
     text-align: center;
     align-self: flex-end;
 }
 
+
 /* Add a black background color to the top navigation */
+
 .topnav {
     background-color: #333;
     overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+}
+
+.topnav a img {
+    max-width: 10%;
+    height: auto;
+    object-fit: contain;
+    padding: 0%;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
     background-color: rgb(71, 71, 71);
     color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
     background-color: #8d8f7d;
     color: white;
-  }
+}
 
-  th, td {
+th,
+td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
+}
 
-  tr:hover {background-color: #8d8f7d7a;}
+tr:hover {
+    background-color: #8d8f7d7a;
+}
 
-  th {
+th {
     background-color: #8d8f7d;
     color: white;
-  }
+}
