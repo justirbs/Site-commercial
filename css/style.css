@@ -68,6 +68,11 @@ table {
     object-fit: contain;
 }
 
+table img {
+    width:150px;
+    height:100px;
+}
+
 .footer {
     background-color: #8d8f7d;
     padding-top: 0.5%;
@@ -135,4 +140,5 @@ tr:hover {
 th {
     background-color: #8d8f7d;
     color: white;
+    text-align: center;
 }
