@@ -19,11 +19,12 @@ h2 {
 }
 
 
-/*.header{
+.header{
     text-align: center;
     align-self: center;
+    background-color: rgb(53, 53, 53);
     width: 100%;
-}*/
+}
 
 .corps {
     text-align: center;
