@@ -41,7 +41,7 @@
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
             <h2>Nos accesoires</h2>
-            <table>
+            <table id="tabAccessoire">
                 <tr>
                     <th>Photo</th>
                     <th>Référence</th>
@@ -79,6 +79,11 @@
                     <td>4€90</td>
                 </tr>
             </table>
+
+            <div style="text-align:right; margin-top: 20px;">
+                <input type="button" class="button" id="boutonStock" value="Afficher les stocks" onclick="afficherStocks('tabAccessoire')">
+            </div>
+
         </div>
     </div>
 
@@ -89,5 +94,7 @@
     </div>
 
 </body>
+
+<script type="text/javascript" src="../js/stock.js"></script>
 
 </html>
