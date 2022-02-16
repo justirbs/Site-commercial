@@ -12,7 +12,7 @@ function afficherStocks(idTab){
     var nouvelleColonne = document.createElement("th");
     nouvelleColonne.innerHTML = "Stock";
     var colonnes = lignes[0].getElementsByTagName("th");
-    lignes[0].insertBefore(nouvelleColonne, colonnes[colonnes.length - 1]);
+    lignes[0].insertBefore(nouvelleColonne, colonnes[colonnes.length - 2]);
 
     switch(idTab) {
         case "tabCigarette":
@@ -34,7 +34,7 @@ function afficherStocks(idTab){
         var colonnes = lignes[i].getElementsByTagName("td");
         var nouvelleColonne = document.createElement("td");
         nouvelleColonne.innerHTML = tabStock[i - 1];
-        lignes[i].insertBefore(nouvelleColonne, colonnes[colonnes.length - 1]);
+        lignes[i].insertBefore(nouvelleColonne, colonnes[colonnes.length - 2]);
     }
 
     // on change les valeurs du bouton
@@ -52,12 +52,12 @@ function masquerStock(idTab){
 
     // on supprime la colonne "stock"
     var colonnes = lignes[0].getElementsByTagName("th");
-    lignes[0].removeChild(colonnes[colonnes.length - 2]);
+    lignes[0].removeChild(colonnes[colonnes.length - 3]);
 
     // pour toutes les autres lignes on supprime la valeur du stock
     for(var i = 1; i < lignes.length; i++){
         var colonnes = lignes[i].getElementsByTagName("td");
-        lignes[i].removeChild(colonnes[colonnes.length - 2]);
+        lignes[i].removeChild(colonnes[colonnes.length - 3]);
     }
 
     // on change les valeurs du bouton
