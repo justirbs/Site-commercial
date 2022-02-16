@@ -29,7 +29,6 @@ function afficherStocks(idTab){
             break;
     }
 
-
     // pour toutes les autres lignes on ajoute la valeur du stock
     for(var i = 1; i < lignes.length; i++){
         var colonnes = lignes[i].getElementsByTagName("td");
@@ -37,4 +36,33 @@ function afficherStocks(idTab){
         nouvelleColonne.innerHTML = tabStock[i - 1];
         lignes[i].insertBefore(nouvelleColonne, colonnes[colonnes.length - 1]);
     }
+
+    // on change les valeurs du bouton
+    var bouton = document.getElementById("boutonStock");
+    bouton.setAttribute("value", "Masquer les stocks");
+    bouton.setAttribute("onclick", "masquerStock('" + idTab + "')");
+
+}
+
+function masquerStock(idTab){
+    // on récupère le tableau des produits
+    var tab = document.getElementById(idTab);
+    // on récupère les lignes du tableau
+    var lignes = tab.getElementsByTagName("tr");
+
+    // on supprime la colonne "stock"
+    var colonnes = lignes[0].getElementsByTagName("th");
+    lignes[0].removeChild(colonnes[colonnes.length - 2]);
+
+    // pour toutes les autres lignes on supprime la valeur du stock
+    for(var i = 1; i < lignes.length; i++){
+        var colonnes = lignes[i].getElementsByTagName("td");
+        lignes[i].removeChild(colonnes[colonnes.length - 2]);
+    }
+
+    // on change les valeurs du bouton
+    var bouton = document.getElementById("boutonStock");
+    bouton.setAttribute("value", "Afficher les stocks");
+    bouton.setAttribute("onclick", "afficherStocks('" + idTab + "')");
+
 }
