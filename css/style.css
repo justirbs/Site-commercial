@@ -162,3 +162,28 @@ th {
     background-color: #333;
     border: 2px solid #8d8f7d;
 }
+
+.divCommande{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.divCommande .button{
+    padding: 0px 5px;
+}
+
+.buttonPanier{
+    background-color: transparent;
+    color: white;
+    padding: 5px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid rgb(71, 71, 71);
+}

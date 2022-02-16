@@ -1,6 +1,6 @@
-var tabStockCigarette = new Array(50, 50, 50, 50, 50);
-var tabStockAccessoire = new Array(40, 50, 50, 50, 50);
-var tabStockGout = new Array(30, 50, 50, 50, 50);
+var tabStockCigarette = new Array(5, 5, 5, 5, 5);
+var tabStockAccessoire = new Array(4, 5, 5, 5, 5);
+var tabStockGout = new Array(3, 5, 5, 5, 5);
 
 function afficherStocks(idTab){
     // on récupère le tableau des produits
@@ -65,4 +65,46 @@ function masquerStock(idTab){
     bouton.setAttribute("value", "Afficher les stocks");
     bouton.setAttribute("onclick", "afficherStocks('" + idTab + "')");
 
+}
+
+function augmenter(bouton){
+    // on récupère le div contenant la quantité commandée
+    var div = bouton.parentNode;
+    // on récupère le nombre de produits commandés
+    var quantite = div.getElementsByTagName("p")[0];
+    // on récupère le tableau des stocks
+    var tab = div.parentNode.parentNode.parentNode.parentNode;
+    switch(tab.id) {
+        case "tabCigarette":
+            var tabStock = tabStockCigarette;
+            break;
+        case "tabAccessoire":
+            var tabStock = tabStockAccessoire;
+            break;
+        case "tabGout":
+            var tabStock = tabStockGout;
+            break;
+        default:
+            console.log("Erreur : idTab non reconnu");
+            break;
+    }
+
+    // on récupère lu numéro du produit
+    var numero = parseInt(div.id.split("_")[1]);
+
+    // on incrémente le nombre de produits commandés si le stock n'est pas épuisé
+    if(quantite.innerHTML < tabStock[numero]){
+        quantite.innerHTML = 1 + parseInt(quantite.innerHTML);
+    }
+}
+
+function diminuer(bouton){
+    // on récupère le div contenant la quantité commandée
+    var div = bouton.parentNode;
+    // on récupère le nombre de produits commandés
+    var quantite = div.getElementsByTagName("p")[0];
+    // on décrémente le nombre de produits commandés si le nombre de produits commandés est supérieur à 0
+    if(quantite.innerHTML > 0){
+        quantite.innerHTML = parseInt(quantite.innerHTML) - 1;
+    }
 }
