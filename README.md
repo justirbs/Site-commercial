@@ -1,4 +1,4 @@
-# Développement Web - TP1
+# Développement Web - Site commercial
 
 ## Description 
 Site pour un projet d'entrerise visant à commercialiser des cigratettes électroniques à l'apparence de cigarettes classiques dans le but de préserver la santé des consommateurs.
