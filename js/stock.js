@@ -1,6 +1,6 @@
-var tabStockCigarette = new Array(5, 5, 5, 5, 5);
-var tabStockAccessoire = new Array(4, 5, 5, 5, 5);
-var tabStockGout = new Array(3, 5, 5, 5, 5);
+var tabStockCigarette = new Array(5, 6, 7, 3, 5);
+var tabStockAccessoire = new Array(4, 5, 8, 9, 6);
+var tabStockGout = new Array(3, 10, 5, 2, 6);
 
 function afficherStocks(idTab){
     // on récupère le tableau des produits
