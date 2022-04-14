@@ -15,7 +15,7 @@
 
     <h1>Veuillez vous connecter :</h1>
 
-        <form id="formulaire" method="post" action="verificationConnexion.php" class="form">
+        <form id="formulaire" method="post" action="../services/verificationConnexion.php" class="form">
 
             <div class="champForm"><p>Identifiant </p><input type="text" id="pseudo" name="pseudo"/></div>
             <div class="champForm"><p>Mot de passe </p><input type="password" id="mdp" name="mdp"/></div>
