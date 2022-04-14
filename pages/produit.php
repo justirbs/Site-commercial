@@ -79,7 +79,7 @@
                 <th>Photo</th>
                 <th>Référence</th>
                 <th>Description</th>
-                <th>Prix</th>
+                <th>Prix(€)</th>
                 <th>Commandes</th>
             </tr>
             ');
@@ -96,7 +96,7 @@
                                 <p>0</p> 
                                 <input type="button" class="button" value="+" onclick="augmenter(this)">
                             </div>
-                            <input type="button" class="buttonPanier" value="Ajouter au panier" onclick="">
+                            <input type="button" class="buttonPanier" value="Ajouter au panier" onclick="ajouterPanier(this)">
                         </td>
                     </tr>'
                     );
@@ -121,5 +121,6 @@
 
 <script type="text/javascript" src="../js/stock.js"></script>
 <script type="text/javascript" src="../js/image.js"></script>
+<script type="text/javascript" src="../js/panier.js"></script>
 
 </html>

@@ -15,7 +15,10 @@
         <?php
 
             if ($_SESSION['pseudo'] != "") {
-                echo '<a href="../services/deconnexion.php" style="float:right" class="active">Déconnexion</a>';
+                echo '
+                <a href="../services/deconnexion.php" style="float:right" class="active">Déconnexion</a>
+                <a style="float:right" class="panier">Panier : '.$_SESSION['panier'].'€</a>
+                ';
             } else {
                 echo '<a href="../pages/connexion.php" style="float:right" class="active">Connexion</a>';
             }

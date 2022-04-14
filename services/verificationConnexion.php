@@ -35,6 +35,7 @@
   if($estCorrect == 1){
     session_start();
     $_SESSION['pseudo'] = $pseudo;
+    $_SESSION['panier'] = 0;
     header('Location: ../index.php?connexion=ok');
   } else {
 		// si la connexion n'est pas valide, on lui envoie un message d'erreur
