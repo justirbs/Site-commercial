@@ -30,7 +30,7 @@
         ?>
 
         <div class='affichage'>
-            <a href="../index.html">Retour à l'accueil</a>
+            <a href="../index.php">Retour à l'accueil</a>
         </div>
     
     </div>

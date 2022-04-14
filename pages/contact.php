@@ -12,32 +12,13 @@
 <body>
 
     <!-- le header de la page -->
-    <div class="header">
-        <div class="topnav">
-            <img src="../img/kulkulkan.jpg" alt="logo" />
-            <a href="../index.html">Société Kukulkan</a>
-            <a href="./cigarettes.html">Cigarettes</a>
-            <a href="./gouts.html">Goûts</a>
-            <a href="./accessoires.html">Accessoires</a>
-            <a href="./contact.html" class="active">Contact</a>
-            <a href="" style="float:right" class="active">Connexion</a>
-        </div>
-    </div>
+    <?php include("../components/header.php"); ?>
 
     <!-- le corps de la page -->
     <div class="corps">
 
         <!-- le menu à gauche de la page -->
-        <div class="menu">
-            <h3>Site Kukulkan</h3>
-            <a href="../index.html">Accueil</a>
-            <h3>Nos produits</h3>
-            <a href="./cigarettes.html">Cigarettes</a><br/><br/>
-            <a href="./gouts.html">Goûts</a><br/><br/>
-            <a href="./accessoires.html">Accessoires</a><br/>
-            <h3>Contactez nous</h3>
-            <a href="./contact.html">Contact</a>
-        </div>
+        <?php include("../components/menu.php"); ?>
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
@@ -83,10 +64,7 @@
     </div>
 
     <!-- le footer de la page -->
-    <div class="footer">
-        <p>Pour nous contacter, veuillez composer le 05.59.01.02.03</p>
-        <p>Copyright © 2022 Kukulkan</p>
-    </div>
+    <?php include("../components/footer.php"); ?>
 
 </body>
 
