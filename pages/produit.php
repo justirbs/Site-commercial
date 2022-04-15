@@ -41,10 +41,6 @@
                     break;
             }
 
-            ?>
-
-            <?php
-
             /*Fonction pour récupérer les informations des produits dans le produits.csv*/
             function construireTabProduits(){
                 $row = 1;
@@ -108,7 +104,9 @@
             </table>
 
             <div style="text-align:right; margin-top: 20px;" id="divBouton">
-                <input type="button" class="button" id="boutonStock" value="Afficher les stocks" onclick="afficherStocks('tabAccessoire')">
+                <?php echo('
+                <input type="button" class="button" id="boutonStock" value="Afficher les stocks" onclick="afficherStocks(\''.$id.'\')">
+                '); ?>
             </div>
 
         </div>

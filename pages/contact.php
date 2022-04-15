@@ -25,8 +25,14 @@
 
             <h2>Contactez nous</h2>
 
+            <?php 
+            if (isset($_GET['mail'])) { 
+                echo('<p>Votre message a bien été envoyé.</p>'); 
+            }
+            ?>
+                
 
-            <form action="" class="form" method="post">
+            <form action="../services/verifMail.php" class="form" method="post">
 
                 <div class="champForm"><p>Date du contact</p><input type="date" name="dateContact" required /></div>
                 
@@ -34,7 +40,7 @@
 
                 <div class="champForm"><p>Prénom</p><input type="text" name="prenom" placeholder="Entrez votre prénom" required /></div>
 
-                <div class="champForm"><p>Email</p><input type="email" name="email" pattern=".+@globex\.com" size="30" placeholder="Entrez votre adresse mail" required/></div>
+                <div class="champForm"><p>Email</p><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" placeholder="Entrez votre adresse mail" required/></div>
 
                 <div class="champForm"><p>Genre</p><input type="radio" name="genre" value="Femme" /> Femme <input type="radio" name="genre" value="Homme" /> Homme</div>
 
