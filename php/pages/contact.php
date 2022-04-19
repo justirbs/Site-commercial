@@ -32,7 +32,7 @@
             ?>
                 
 
-            <form action="../services/verifMail.php" class="form" method="post">
+            <form action="../php/services/verifMail.php" class="form" method="post">
 
                 <div class="champForm"><p>Date du contact</p><input type="date" name="dateContact" required /></div>
                 

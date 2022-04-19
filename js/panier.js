@@ -10,5 +10,5 @@ function ajouterPanier(bouton){
     // on ajoute le montant du produit au panier
     var montant = parseFloat(quantite) * parseFloat(prix);
     // on redirige vers la page ajouterPanier.php
-    window.location.href = "../services/ajouterPanier.php?montant="+montant;
+    window.location.href = "../php/services/ajouterPanier.php?montant="+montant;
 }

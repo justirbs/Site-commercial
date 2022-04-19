@@ -27,6 +27,6 @@
 
 // $mail->send();
 
-header('Location: ../pages/contact.php?mail=ok');
+header('Location: ../php/pages/contact.php?mail=ok');
 
 ?>
