@@ -11,13 +11,13 @@
 <body>
 
     <!-- le header de la page -->
-    <?php include("../components/header.php"); ?>
+    <?php include("../php/components/header.php"); ?>
 
     <!-- le corps de la page -->
     <div class="corps">
 
         <!-- le menu à gauche de la page -->
-        <?php include("../components/menu.php"); ?>
+        <?php include("../php/components/menu.php"); ?>
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
@@ -27,7 +27,7 @@
     </div>
 
     <!-- le footer de la page -->
-    <?php include("../components/footer.php"); ?>
+    <?php include("../php/components/footer.php"); ?>
 
 </body>
 
