@@ -23,9 +23,9 @@
         <div class="principal">
             <?php
 
-            /*
+            
             // Connexion à la Base De Données
-            $cnx = mysqli_connect('localhost','root','eisti0001');
+            $cnx = mysqli_connect('localhost','devWeb','mdpDevWeb0');
             if (mysqli_connect_errno($cnx)) {
                 echo mysqli_connect_error();
             };
@@ -33,19 +33,25 @@
             if (!$boolRes) throw new Exception($base.' introuvable');
 
             // Requêtes à la Base De Données
-            $req = 'SELECT * FROM PRODUIT';
-            select p.reference, p.img, p.prix, c.nom as categorie FROM Produit as p INNER JOIN Categorie as c WHERE p.idCategorie = c.idCategorie;
+            $req = 'SELECT p.reference, p.img, p.descriptionProduit, p.prix, p.stock, c.nom as categorie 
+                FROM Produit as p 
+                INNER JOIN Categorie as c 
+                WHERE p.idCategorie = c.idCategorie';
             $result = mysqli_query($cnx,$req);
-
-            echo('ok');
-            */
-
+            
+            // Récupération des données
+            $tabProduits = array();
+            $row = 1;
             while ($data = mysqli_fetch_assoc($result)) {
-                echo $data['reference'].'<br/>';
-                echo $data['img'].'<br/>';
-                echo $data['descriptionProduit'].'<br/>';
-                echo $data['prix'].'<br/>';
-                echo $data['idCategorie'].'<br/>';
+                $tabProduits[$row] = array(
+                    "cat" => $data['categorie'],
+                    "ref" => $data['reference'],
+                    "prix" => $data['prix'],
+                    "description" => $data['descriptionProduit'],
+                    "img" => $data['img'],
+                    "stock" => $data['stock']
+                );
+                $row ++;
             }
             mysqli_free_result($data);
 
@@ -68,34 +74,6 @@
                     break;
             }
 
-            /*Fonction pour récupérer les informations des produits dans le produits.csv*/
-            function construireTabProduits(){
-                $row = 1;
-                $tabProduits = array(); // tableau contenant toute les infos des produits
-                    // on ouvre le fichier
-                if (($handle = fopen("../../csv/produits.csv", "r")) !== FALSE) {
-                    while (($data = fgetcsv($handle, 1000, ";"))) {
-                        
-                        if($row != 0 && $data[0] == $_GET['cat']){
-                            
-                            $tabProduits[$row-1] = array(
-                                "cat" => $data[0],
-                                "ref" => $data[2],
-                                "prix" => $data[3],
-                                "description" => $data[4],
-                                "img" => $data[1]
-                            );
-                    
-                        }
-                        $row++;
-                    }
-                    fclose($handle);
-                }
-                return($tabProduits);
-            }
-
-            $tabProduits = construireTabProduits();
-
             echo('
             <table id="'.$id.'">
             <tr>
@@ -107,7 +85,8 @@
             </tr>
             ');
             foreach ($tabProduits as $indice => $produit) {
-                echo('
+                if($produit['cat'] == $_GET['cat']){
+                    echo('
                     <tr>
                         <td><img src='.$produit['img'].' onclick="zoomer(this)"/></td>
                         <td>'.$produit['ref'].'</td>
@@ -123,12 +102,13 @@
                         </td>
                     </tr>'
                     );
+                }
             }
 
-            /*
+            
             // Déconnexion à la Base De Données
             mysqli_close($cnx);
-            */
+            
 
             ?>
         

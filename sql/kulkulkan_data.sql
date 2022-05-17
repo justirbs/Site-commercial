@@ -32,3 +32,10 @@ INSERT INTO Produit VALUES(null,'../../img/ananas.png','Un cocktail détonnant a
 INSERT INTO Client VALUES(null,'toto','mpd1');
 INSERT INTO Client VALUES(null,'tata','mpd2');
 INSERT INTO Client VALUES(null,'titi','mpd3');
+
+/* ---------------------------------------------------------- */
+/* -- Créer les id -- */
+/* ---------------------------------------------------------- */
+SET GLOBAL validate_password.policy = 0;
+CREATE USER 'devWeb'@'localhost' IDENTIFIED BY 'mdpDevWeb0';
+GRANT ALL PRIVILEGES ON *.* TO 'devWeb'@'localhost';

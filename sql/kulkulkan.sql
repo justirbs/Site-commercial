@@ -27,3 +27,4 @@ CREATE TABLE Produit (
   idCategorie int(1) NOT NULL,
   FOREIGN KEY (idCategorie) REFERENCES Categorie(idCategorie)
 );
+
