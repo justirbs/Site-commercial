@@ -23,6 +23,7 @@ CREATE TABLE Produit (
   img text NOT NULL,
   descriptionProduit text NOT NULL,
   prix int(100) NOT NULL,
+  stock int(100) NOT NULL,
   idCategorie int(1) NOT NULL,
   FOREIGN KEY (idCategorie) REFERENCES Categorie(idCategorie)
 );
