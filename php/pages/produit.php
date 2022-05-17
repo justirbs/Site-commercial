@@ -4,24 +4,51 @@
     <title> Kukulkan | Accessoires</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="icon" type="image/jpg" href="../img/kulkulkan.jpg">
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="icon" type="image/jpg" href="../../img/kulkulkan.jpg">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
 <body>
 
     <!-- le header de la page -->
-    <?php include("../php/components/header.php"); ?>
+    <?php include("../components/header.php"); ?>
 
     <!-- le corps de la page -->
     <div class="corps">
 
         <!-- le menu à gauche de la page -->
-        <?php include("../php/components/menu.php"); ?>
+        <?php include("../components/menu.php"); ?>
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
             <?php
+
+            /*
+            // Connexion à la Base De Données
+            $cnx = mysqli_connect('localhost','root','eisti0001');
+            if (mysqli_connect_errno($cnx)) {
+                echo mysqli_connect_error();
+            };
+            $boolRes = mysqli_select_db($cnx, 'kulkulkan');
+            if (!$boolRes) throw new Exception($base.' introuvable');
+
+            // Requêtes à la Base De Données
+            $req = 'SELECT * FROM PRODUIT';
+            select p.reference, p.img, p.prix, c.nom as categorie FROM Produit as p INNER JOIN Categorie as c WHERE p.idCategorie = c.idCategorie;
+            $result = mysqli_query($cnx,$req);
+
+            echo('ok');
+            */
+
+            while ($data = mysqli_fetch_assoc($result)) {
+                echo $data['reference'].'<br/>';
+                echo $data['img'].'<br/>';
+                echo $data['descriptionProduit'].'<br/>';
+                echo $data['prix'].'<br/>';
+                echo $data['idCategorie'].'<br/>';
+            }
+            mysqli_free_result($data);
+
 
             switch($_GET['cat']){
                 case "accessoires":
@@ -46,7 +73,7 @@
                 $row = 1;
                 $tabProduits = array(); // tableau contenant toute les infos des produits
                     // on ouvre le fichier
-                if (($handle = fopen("../csv/produits.csv", "r")) !== FALSE) {
+                if (($handle = fopen("../../csv/produits.csv", "r")) !== FALSE) {
                     while (($data = fgetcsv($handle, 1000, ";"))) {
                         
                         if($row != 0 && $data[0] == $_GET['cat']){
@@ -98,6 +125,11 @@
                     );
             }
 
+            /*
+            // Déconnexion à la Base De Données
+            mysqli_close($cnx);
+            */
+
             ?>
         
             
@@ -113,12 +145,12 @@
     </div>
 
     <!-- le footer de la page -->
-    <?php include("../php/components/footer.php"); ?>
+    <?php include("../components/footer.php"); ?>
 
 </body>
 
-<script type="text/javascript" src="../js/stock.js"></script>
-<script type="text/javascript" src="../js/image.js"></script>
-<script type="text/javascript" src="../js/panier.js"></script>
+<script type="text/javascript" src="../../js/stock.js"></script>
+<script type="text/javascript" src="../../js/image.js"></script>
+<script type="text/javascript" src="../../js/panier.js"></script>
 
 </html>

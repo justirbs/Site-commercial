@@ -1,16 +1,16 @@
 cat;img;ref;prix;description
-accessoires;"../img/vapband.png";1370;1;Conçu pour protéger le Pyrex de votre Atomiseur , ce VapBand en silicone saura également le personnaliser, vous ne pourrez plus vous en passer !
-accessoires;"../img/charge.png";16103;5;Le câble USB Type C 2.0 connecte votre cigarette électronique équipée de la nouvelle technologie USB-C, à tous ports USB pour une recharge efficace.
-accessoires;"../img/spray.png";12804;3;Le Spray Hydroalcoolique Multi-surfaces désinfecte immédiatement les mains et les surfaces, sans eau, sans savon et sans rinçage.
-accessoires;"../img/drip.png";12606;4;Ces drips en résine vous feront lus ressentir les gouts que vous vapoter !
-accessoires;"../img/house.png";12841;5;Cette house en sillicon protegera votre cigarette electronique des chocs les plus violents pour une plus grande durabilité
-cigarettes;"../img/e-box.jpeg";11888;63;Inti est une e-cig box permettant de faire de gros nuages de fumés. Elle a une autonomie de 2 jours et sera apprecier des vapoteur expérimenté
-cigarettes;"../img/e-tube.jpg";11775;42;Izel est une e-cig tube permettant de faire beaucoup de fumée. La batterie tient un peu moins de 2 jours.
-cigarettes;"../img/e-pod.png";11005;24;Quetzali est une e-cig pod dont la forme se rapproche de celle d'une cigarette. Elle a une autonomie d'une journée
-cigarettes;"../img/e-jetable.jpg";11666;10;Ikal est une cigarette electronique jetable. Son usage est réservé aux fumeurs qui souhaitent arrêter la cigarette.
-cigarettes;"../img/e-cigalike.png";11100;35;Tooko est un paquet de e-cigalike, l'ancêtre de la cigarette electronique. Cette version 2.0 vous permettra de retrouver toutes les habitudes d'un vrai fumeur comme le gest ou le paquet de cigarette (ici la batterie).
-gouts;"../img/fruity-sun.png";16978;19;Un duo méga fruité ! Retrouvez toute l’extravagance de la fraise et du pamplemousse dans ce mélange complétement fou à vaper sans modération !
-gouts;"../img/kaplina.png";16821;20;Cette édition de notre Borsalino à steeper plus de 6 mois ce qui a pour effet de décupler les saveurs et d’offrir une divine rondeur en bouche..Les saveurs de notre Borsalino en version réserve Un mix corsé de tabac, caramel et cappuccino.
-gouts;"../img/mousse.png";16780;20;Laissez-vous tenter par cet eliquide terriblement savoureux ! Une mousse au chocolat blanc tout en légèreté saupoudré de fins éclats de noisette croquants.
-gouts;"../img/ragnarok.png";16759;20;Un mélange fruité aux saveurs de fruits rouges tel que des fraises et des mûres, des framboises et des myrtilles…
-gouts;"../img/ananas.png";16744;20;Un cocktail détonnant aux saveurs acidulées et exotiques d’ananas rôti, avec le caractère boisé du whisky et aux légères notes de coco.
+accessoires;"../../img/vapband.png";1370;1;Conçu pour protéger le Pyrex de votre Atomiseur , ce VapBand en silicone saura également le personnaliser, vous ne pourrez plus vous en passer !
+accessoires;"../../img/charge.png";16103;5;Le câble USB Type C 2.0 connecte votre cigarette électronique équipée de la nouvelle technologie USB-C, à tous ports USB pour une recharge efficace.
+accessoires;"../../img/spray.png";12804;3;Le Spray Hydroalcoolique Multi-surfaces désinfecte immédiatement les mains et les surfaces, sans eau, sans savon et sans rinçage.
+accessoires;"../../img/drip.png";12606;4;Ces drips en résine vous feront lus ressentir les gouts que vous vapoter !
+accessoires;"../../img/house.png";12841;5;Cette house en sillicon protegera votre cigarette electronique des chocs les plus violents pour une plus grande durabilité
+cigarettes;"../../img/e-box.jpeg";11888;63;Inti est une e-cig box permettant de faire de gros nuages de fumés. Elle a une autonomie de 2 jours et sera apprecier des vapoteur expérimenté
+cigarettes;"../../img/e-tube.jpg";11775;42;Izel est une e-cig tube permettant de faire beaucoup de fumée. La batterie tient un peu moins de 2 jours.
+cigarettes;"../../img/e-pod.png";11005;24;Quetzali est une e-cig pod dont la forme se rapproche de celle d'une cigarette. Elle a une autonomie d'une journée
+cigarettes;"../../img/e-jetable.jpg";11666;10;Ikal est une cigarette electronique jetable. Son usage est réservé aux fumeurs qui souhaitent arrêter la cigarette.
+cigarettes;"../../img/e-cigalike.png";11100;35;Tooko est un paquet de e-cigalike, l'ancêtre de la cigarette electronique. Cette version 2.0 vous permettra de retrouver toutes les habitudes d'un vrai fumeur comme le gest ou le paquet de cigarette (ici la batterie).
+gouts;"../../img/fruity-sun.png";16978;19;Un duo méga fruité ! Retrouvez toute l’extravagance de la fraise et du pamplemousse dans ce mélange complétement fou à vaper sans modération !
+gouts;"../../img/kaplina.png";16821;20;Cette édition de notre Borsalino à steeper plus de 6 mois ce qui a pour effet de décupler les saveurs et d’offrir une divine rondeur en bouche..Les saveurs de notre Borsalino en version réserve Un mix corsé de tabac, caramel et cappuccino.
+gouts;"../../img/mousse.png";16780;20;Laissez-vous tenter par cet eliquide terriblement savoureux ! Une mousse au chocolat blanc tout en légèreté saupoudré de fins éclats de noisette croquants.
+gouts;"../../img/ragnarok.png";16759;20;Un mélange fruité aux saveurs de fruits rouges tel que des fraises et des mûres, des framboises et des myrtilles…
+gouts;"../../img/ananas.png";16744;20;Un cocktail détonnant aux saveurs acidulées et exotiques d’ananas rôti, avec le caractère boisé du whisky et aux légères notes de coco.

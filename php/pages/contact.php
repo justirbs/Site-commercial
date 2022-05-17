@@ -4,21 +4,21 @@
     <title> Kukulkan | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="icon" type="image/jpg" href="../img/kulkulkan.jpg">
-    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="icon" type="image/jpg" href="../../img/kulkulkan.jpg">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 
 <body>
 
     <!-- le header de la page -->
-    <?php include("../php/components/header.php"); ?>
+    <?php include("../components/header.php"); ?>
 
     <!-- le corps de la page -->
     <div class="corps">
 
         <!-- le menu à gauche de la page -->
-        <?php include("../php/components/menu.php"); ?>
+        <?php include("../components/menu.php"); ?>
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
@@ -32,7 +32,7 @@
             ?>
                 
 
-            <form action="../php/services/verifMail.php" class="form" method="post">
+            <form action="../services/verifMail.php" class="form" method="post">
 
                 <div class="champForm"><p>Date du contact</p><input type="date" name="dateContact" required /></div>
                 
@@ -70,7 +70,7 @@
     </div>
 
     <!-- le footer de la page -->
-    <?php include("../php/components/footer.php"); ?>
+    <?php include("../components/footer.php"); ?>
 
 </body>
 

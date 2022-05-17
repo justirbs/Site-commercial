@@ -4,7 +4,7 @@
     $row = 1;
     $tabIdentifiants = array(); // tableau contenant tous les identifiant et mot de passe
 		// on ouvre le fichier
-    if (($handle = fopen("../csv/identifiants.csv", "r")) !== FALSE) {
+    if (($handle = fopen("../../csv/identifiants.csv", "r")) !== FALSE) {
         while (($data = fgetcsv($handle, 1000, ";"))) {
             
             if($row != 0){
@@ -36,10 +36,10 @@
     session_start();
     $_SESSION['pseudo'] = $pseudo;
     $_SESSION['panier'] = 0;
-    header('Location: ../index.php?connexion=ok');
+    header('Location: ../../index.php?connexion=ok');
   } else {
 		// si la connexion n'est pas valide, on lui envoie un message d'erreur
-    header('Location: connexion.php?LoginError=true');
+    header('Location: ../pages/connexion.php?LoginError=true');
   }
 
   ?>

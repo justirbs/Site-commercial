@@ -3,10 +3,10 @@
     session_start();
 
     if($_SESSION['pseudo'] == ""){
-        header('Location: ../php/pages/connexion.php');
+        header('Location: ../pages/connexion.php');
     } else {
         $_SESSION['panier'] += $_GET['montant'];
-        header('Location: ../php/pages/accueil.php');
+        header('Location: ../pages/accueil.php');
     }
 
 ?>

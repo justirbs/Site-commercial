@@ -4,9 +4,9 @@
     <title>Kukulkan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="icon" type="image/jpg" href="../img/kulkulkan.jpg">
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <link rel="icon" type="image/jpg" href="../../img/kulkulkan.jpg">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/form.css"/>
 </head>
 
 <body style="background-color: #333;">
@@ -15,7 +15,7 @@
 
     <h1>Veuillez vous connecter :</h1>
 
-        <form id="formulaire" method="post" action="../php/services/verificationConnexion.php" class="form">
+        <form id="formulaire" method="post" action="../services/verificationConnexion.php" class="form">
 
             <div class="champForm"><p>Identifiant </p><input type="text" id="pseudo" name="pseudo"/></div>
             <div class="champForm"><p>Mot de passe </p><input type="password" id="mdp" name="mdp"/></div>
@@ -30,7 +30,7 @@
         ?>
 
         <div class='affichage'>
-            <a href="../index.php">Retour à l'accueil</a>
+            <a href="../../index.php">Retour à l'accueil</a>
         </div>
     
     </div>
