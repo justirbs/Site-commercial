@@ -21,6 +21,7 @@
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
+            <div id="console"></div>
             <?php
 
             
