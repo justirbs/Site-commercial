@@ -1,7 +1,3 @@
-var tabStockCigarette = new Array(5, 6, 7, 3, 5);
-var tabStockAccessoire = new Array(4, 5, 8, 9, 6);
-var tabStockGout = new Array(3, 10, 5, 2, 6);
-
 function afficherStocks(idTab){
     // on récupère le tableau des produits
     var tab = document.getElementById(idTab);
@@ -14,26 +10,14 @@ function afficherStocks(idTab){
     var colonnes = lignes[0].getElementsByTagName("th");
     lignes[0].insertBefore(nouvelleColonne, colonnes[colonnes.length - 2]);
 
-    switch(idTab) {
-        case "tabCigarette":
-            var tabStock = tabStockCigarette;
-            break;
-        case "tabAccessoire":
-            var tabStock = tabStockAccessoire;
-            break;
-        case "tabGout":
-            var tabStock = tabStockGout;
-            break;
-        default:
-            console.log("Erreur : idTab non reconnu");
-            break;
-    }
 
     // pour toutes les autres lignes on ajoute la valeur du stock
     for(var i = 1; i < lignes.length; i++){
         var colonnes = lignes[i].getElementsByTagName("td");
         var nouvelleColonne = document.createElement("td");
-        nouvelleColonne.innerHTML = tabStock[i - 1];
+        // on récupère la valeur du stock dans le div de la commande
+        var divCommande = colonnes[4].children[0];
+        nouvelleColonne.innerHTML = divCommande.id;
         lignes[i].insertBefore(nouvelleColonne, colonnes[colonnes.length - 2]);
     }
 
@@ -74,26 +58,12 @@ function augmenter(bouton){
     var quantite = div.getElementsByTagName("p")[0];
     // on récupère le tableau des stocks
     var tab = div.parentNode.parentNode.parentNode.parentNode;
-    switch(tab.id) {
-        case "tabCigarette":
-            var tabStock = tabStockCigarette;
-            break;
-        case "tabAccessoire":
-            var tabStock = tabStockAccessoire;
-            break;
-        case "tabGout":
-            var tabStock = tabStockGout;
-            break;
-        default:
-            console.log("Erreur : idTab non reconnu");
-            break;
-    }
 
-    // on récupère lu numéro du produit
-    var numero = parseInt(div.id.split("_")[1]);
+    // on récupère le stock du produit
+    var stock = div.id;
 
     // on incrémente le nombre de produits commandés si le stock n'est pas épuisé
-    if(quantite.innerHTML < tabStock[numero]){
+    if(quantite.innerHTML < stock){
         quantite.innerHTML = 1 + parseInt(quantite.innerHTML);
     }
 }

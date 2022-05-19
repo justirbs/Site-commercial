@@ -55,27 +55,8 @@
             }
             mysqli_free_result($data);
 
-
-            switch($_GET['cat']){
-                case "accessoires":
-                    echo "<h2>Nos accesoires</h2>";
-                    $id = "tabAccessoire";
-                    break;
-                case "cigarettes":
-                    echo "<h2>Nos cigarettes</h2>";
-                    $id = "tabCigarette";
-                    break;
-                case "gouts":
-                    echo "<h2>Nos goûts</h2>";
-                    $id = "tabGout";
-                    break;
-                default:
-                    echo "<h2>Nos produits</h2>";
-                    break;
-            }
-
             echo('
-            <table id="'.$id.'">
+            <table id="'.$_GET['cat'].'">
             <tr>
                 <th>Photo</th>
                 <th>Référence</th>
@@ -93,7 +74,7 @@
                         <td>'.$produit['description'].'</td>
                         <td>'.$produit['prix'].'</td>
                         <td>
-                            <div class="divCommande" id="commande_0">
+                            <div class="divCommande" id="'.$produit["stock"].'">
                                 <input type="button" class="button" value="-" onclick="diminuer(this)"> 
                                 <p>0</p> 
                                 <input type="button" class="button" value="+" onclick="augmenter(this)">
@@ -117,7 +98,7 @@
 
             <div style="text-align:right; margin-top: 20px;" id="divBouton">
                 <?php echo('
-                <input type="button" class="button" id="boutonStock" value="Afficher les stocks" onclick="afficherStocks(\''.$id.'\')">
+                <input type="button" class="button" id="boutonStock" value="Afficher les stocks" onclick="afficherStocks(\''.$_GET['cat'].'\')">
                 '); ?>
             </div>
 
