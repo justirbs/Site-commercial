@@ -21,6 +21,11 @@
 
         <!-- le contenu principal à droite de la page -->
         <div class="principal">
+            <?php
+                if($_SESSION["pseudo"] != ""){
+                    echo("<h1>Bienvenue ".$_SESSION["pseudo"]."</h1>");
+                }
+            ?>
             <h1>"Fumez, tout en restant en bonne santé"</h1>
             <img src="../../img/kulkulkan.jpg" alt="logo" style="width:400px;"/>
         </div>

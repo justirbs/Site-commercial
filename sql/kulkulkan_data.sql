@@ -29,9 +29,9 @@ INSERT INTO Produit VALUES(null,'../../img/ananas.png','Un cocktail détonnant a
 /* ---------------------------------------------------------- */
 /* -- CLIENT -- */
 /* ---------------------------------------------------------- */
-INSERT INTO Client VALUES(null,'toto','mpd1');
-INSERT INTO Client VALUES(null,'tata','mpd2');
-INSERT INTO Client VALUES(null,'titi','mpd3');
+INSERT INTO Client VALUES(null,'toto','mdp1');
+INSERT INTO Client VALUES(null,'tata','mdp2');
+INSERT INTO Client VALUES(null,'titi','mdp3');
 
 /* ---------------------------------------------------------- */
 /* -- Créer les id -- */

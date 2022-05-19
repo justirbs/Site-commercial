@@ -1,40 +1,34 @@
   <?php
-  /*Fonction pour récupérer les identifiants dans le identifiant.csv*/
-  function construireTabIdentifiants(){
-    $row = 1;
-    $tabIdentifiants = array(); // tableau contenant tous les identifiant et mot de passe
-		// on ouvre le fichier
-    if (($handle = fopen("../../csv/identifiants.csv", "r")) !== FALSE) {
-        while (($data = fgetcsv($handle, 1000, ";"))) {
-            
-            if($row != 0){
+  // Connexion à la Base De Données
+  $cnx = mysqli_connect('localhost','devWeb','mdpDevWeb0');
+  if (mysqli_connect_errno($cnx)) {
+      echo mysqli_connect_error();
+  };
+  $boolRes = mysqli_select_db($cnx, 'kulkulkan');
+  if (!$boolRes) throw new Exception($base.' introuvable');
 
-                $tabIdentifiants[$data[0]] = $data[1];
-        
-            }
-            $row++;
-        }
-        fclose($handle);
-    }
-    return($tabIdentifiants);
-  }
+  // Requêtes à la Base De Données
+  $req = 'SELECT pseudo, mdp FROM Client WHERE pseudo = "'.$_POST['pseudo'].'"';
 
-
+  $result = mysqli_query($cnx,$req);
+  
   $estCorrect = 0;
-  $tabIdentifiants = construireTabIdentifiants();
-	// on compare les valeurs entrées par l'utilisateurs à tous les identifiants et mots de passe
-  foreach ($tabIdentifiants as $pseudo => $mdp) {
-    if($pseudo == $_POST["pseudo"]  &&  $mdp == $_POST["mdp"]){
-			// si il y a un identifiant et un mot de passe correspondnat, on valide la connexion
-      $estCorrect = 1;
-      
-    }
+  // Récupération des données
+  $data = mysqli_fetch_assoc($result);
+  if ( $_POST["mdp"] == $data["mdp"] ) {
+    $estCorrect = 1;
   }
+  
+  mysqli_free_result($data);
 
+  // Déconnexion à la Base De Données
+  mysqli_close($cnx);
+
+  
 	// si la connexion est correcte, on redirige l'utilisateur vers sa page profil
   if($estCorrect == 1){
     session_start();
-    $_SESSION['pseudo'] = $pseudo;
+    $_SESSION['pseudo'] = $_POST["pseudo"];
     $_SESSION['panier'] = 0;
     header('Location: ../../index.php?connexion=ok');
   } else {
