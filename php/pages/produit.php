@@ -56,6 +56,21 @@
             }
             mysqli_free_result($data);
 
+            switch($_GET['cat']){
+                case "accessoires":
+                    echo "<h2>Nos accesoires</h2>";
+                    break;
+                case "cigarettes":
+                    echo "<h2>Nos cigarettes</h2>";
+                    break;
+                case "gouts":
+                    echo "<h2>Nos goûts</h2>";
+                    break;
+                default:
+                    echo "<h2>Nos produits</h2>";
+                    break;
+            }
+
             echo('
             <table id="'.$_GET['cat'].'">
             <tr>
